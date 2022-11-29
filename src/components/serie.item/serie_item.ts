@@ -2,7 +2,7 @@ import { Series } from '../../model/series.js';
 
 export class Item {
     constructor(public serie: Series) {
-        this.createTemplate();
+        // this.createTemplate();
     }
 
     createTemplate() {

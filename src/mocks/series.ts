@@ -29,7 +29,7 @@ export const series: Array<SeriesType> = [
         poster: 'https://pics.filmaffinity.com/Mad_Men_Serie_de_TV-351490728-large.jpg',
         score: 5,
         enemies: 116,
-        watched: false,
+        watched: true,
     },
     {
         id: 4,
@@ -46,14 +46,11 @@ export const series: Array<SeriesType> = [
         name: 'Atypical',
         creator: 'Robia Rashid',
         year: 2017,
-        poster: 'https://www.cine.com/media/series/2711.jpg',
+        poster: 'https://pics.filmaffinity.com/atypical-405052091-large.jpg',
         score: 0,
         enemies: 0,
-        watched: false,
+        watched: true,
     },
 ];
 
 export const InitializeSeries = () => series;
-console.log('Init: ' + series);
-console.log('[0]: ' + series[0]);
-console.log('creator: ' + series[0].creator);
