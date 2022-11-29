@@ -1,12 +1,26 @@
 import { afterHeader } from './components/afterHeader/afterHeader.js';
 import { Header } from './components/header/header.js';
 import { itemList } from './components/itemList/itemList.js';
+import { series } from './mocks/series.js';
+import { watchedSeries } from './components/watchedSeries/watchedSeries.js';
+import { UnWatchedSeries } from './components/unWatchedSeries/unWatchedSeries.js';
+import { Series } from './model/series.js';
 
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
         new Header('.header');
         new afterHeader('.seriesList');
-        new itemList('.seriesUnWatched');
-        new itemList('.seriesWatched');
+        new itemList('.seriesUnWatched', UnWatchedSeries(series));
+        new itemList('.seriesWatched', watchedSeries(series));
+
+        //No funciona todavía el addEventListener:
+        const deleteButton = document.querySelector('.icon--delete');
+        if (deleteButton != null) {
+            document.addEventListener('click', () => {
+                Series.prototype.watched = true;
+                console.log(Series.prototype);
+                console.log(series);
+            });
+        }
     });
 })();
