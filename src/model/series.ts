@@ -1,5 +1,5 @@
-type SeriesType = {
-    id: string;
+export type SeriesType = {
+    id: number;
     name: string;
     creator: string;
     year: number;
@@ -15,9 +15,9 @@ export class Series implements SeriesType {
         crypto.getRandomValues(aNumbers);
         return ('000000' + aNumbers[0]).slice(-6);
     }
-    id: string;
     watched: boolean;
     constructor(
+        public id: number,
         public name: string,
         public creator: string,
         public year: number,
@@ -25,7 +25,6 @@ export class Series implements SeriesType {
         public score: number,
         public enemies: number
     ) {
-        this.id = Series.generateId();
         this.watched = false;
     }
 }
