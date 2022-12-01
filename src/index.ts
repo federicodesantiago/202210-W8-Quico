@@ -16,11 +16,12 @@ import { Series } from './model/series.js';
         //No funciona todavía el addEventListener:
         const deleteButton = document.querySelector('.icon--delete');
         if (deleteButton != null) {
-            document.addEventListener('click', () => {
+            deleteButton.addEventListener('click', () => {
                 Series.prototype.watched = true;
-                console.log(Series.prototype);
-                console.log(series);
+                console.log('clicked');
             });
         }
     });
 })();
+console.log('number: ', series);
+console.log('number0: ', series[0]);

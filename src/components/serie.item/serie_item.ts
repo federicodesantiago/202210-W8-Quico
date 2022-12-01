@@ -16,7 +16,8 @@ export class Item {
                                 <p class="serie__info">${this.serie.creator} ${this.serie.year}</p>
                                 <ul class="score">
                                     <li class="score__star">
-                                        <i
+                                    <slot name="numberStars"></slot>     
+                                    <i
                                             class="icon--score fas fa-star"
                                             title="1/5"
                                         ></i>
