@@ -21,15 +21,16 @@ import { Series } from './model/series.js';
         //         console.log('clicked');
         //     });
         // }
-
-        const starsButton = document.querySelector('.icon--delete');
-        if (starsButton != null) {
-            starsButton.addEventListener('click', () => {
-                series. = true;
-                console.log('clicked');
-            });
-        }
-    };);
+        series.forEach((item) => {
+            const starsButton = document.querySelector('.icon--delete');
+            if (starsButton != null) {
+                starsButton.addEventListener('click', () => {
+                    series[item].watched = true;
+                    console.log('clicked');
+                });
+            }
+        });
+    });
 })();
 console.log('number: ', series);
 console.log('number0: ', series[0]);
