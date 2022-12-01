@@ -14,14 +14,22 @@ import { Series } from './model/series.js';
         new itemList('.seriesWatched', watchedSeries(series));
 
         //No funciona todavía el addEventListener:
-        const deleteButton = document.querySelector('.icon--delete');
-        if (deleteButton != null) {
-            deleteButton.addEventListener('click', () => {
-                Series.prototype.watched = true;
+        // const deleteButton = document.querySelector('.icon--delete');
+        // if (deleteButton != null) {
+        //     deleteButton.addEventListener('click', () => {
+        //         series. = true;
+        //         console.log('clicked');
+        //     });
+        // }
+
+        const starsButton = document.querySelector('.icon--delete');
+        if (starsButton != null) {
+            starsButton.addEventListener('click', () => {
+                series. = true;
                 console.log('clicked');
             });
         }
-    });
+    };);
 })();
 console.log('number: ', series);
 console.log('number0: ', series[0]);
